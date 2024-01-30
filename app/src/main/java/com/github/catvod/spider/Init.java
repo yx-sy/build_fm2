@@ -43,7 +43,7 @@ public class Init {
     public static void init(Context context) {
         get().app = ((Application) context);
         SpiderDebug.log("自定义爬虫代码载入成功！");
-		Notify.show("资源来源网络，免费。By：FireFly");
+	Notify.show("资源来源于网络免费爬取。");
     }
 
     public static void execute(Runnable runnable) {
