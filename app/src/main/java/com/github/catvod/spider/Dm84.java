@@ -68,8 +68,8 @@ public class Dm84 extends Spider {
             doc = Jsoup.parse(OkHttp.string(siteUrl + "/list-" + item.getTypeId() + ".html", getHeaders()));
             Elements elements = doc.select("ul.list_filter > li > div");
             List<Filter> array = new ArrayList<>();
-            array.add(getFilter("類型", "type", elements.get(0).select("a").eachText()));
-            array.add(getFilter("時間", "year", elements.get(1).select("a").eachText()));
+            array.add(getFilter("类型", "type", elements.get(0).select("a").eachText()));
+            array.add(getFilter("时间", "year", elements.get(1).select("a").eachText()));
             array.add(getFilter("排序", "by", elements.get(2).select("a").eachText()));
             filters.put(item.getTypeId(), array);
         }
