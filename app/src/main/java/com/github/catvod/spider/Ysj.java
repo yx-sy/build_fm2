@@ -52,9 +52,9 @@ public class Ysj extends Spider {
         List<Filter> array = new ArrayList<>();
         LinkedHashMap<String, List<Filter>> filters = new LinkedHashMap<>();
         Document doc = Jsoup.parse(OkHttp.string(homeUrl, getHeaders()));
-        array.add(getFilter("地區", "area", doc.select("div#hl03").select("a").eachText()));
+        array.add(getFilter("地区", "area", doc.select("div#hl03").select("a").eachText()));
         array.add(getFilter("年份", "year", doc.select("div#hl04").select("a").eachText()));
-        array.add(getFilter("語言", "lang", doc.select("div#hl05").select("a").eachText()));
+        array.add(getFilter("语言", "lang", doc.select("div#hl05").select("a").eachText()));
         array.add(getFilter("字母", "letter", doc.select("div#hl06").select("a").eachText()));
         for (Element element : doc.select("div#hl02").select("a")) {
             String typeId = element.attr("href").split("/")[5];
