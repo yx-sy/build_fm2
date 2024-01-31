@@ -35,8 +35,8 @@ public class Condition {
 
     public List<Filter> getFilter() {
         List<Filter> filters = new ArrayList<>();
-        filters.add(new Filter("type", "類型", getTypeValues()));
-        filters.add(new Filter("area", "地區", getAreaValues()));
+        filters.add(new Filter("type", "类型", getTypeValues()));
+        filters.add(new Filter("area", "地区", getAreaValues()));
         filters.add(new Filter("year", "年份", getYearValues()));
         return filters;
     }
