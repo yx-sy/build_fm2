@@ -60,7 +60,6 @@ public class Kanqiu extends Spider {
         Elements lis = Jsoup.parse(OkHttp.string(siteUrl + urlPath, getHeader())).select(".list-group-item");
         List<Vod> list = new ArrayList<>();
         for (Element li : lis) {
-            size = doc.select(".list-group-item").size();
             String vid = siteUrl + li.select(".btn.btn-primary").attr("href");
             String name = li.select(".row.d-none").text();
             if (name.isEmpty()) name = li.text();
@@ -75,7 +74,7 @@ public class Kanqiu extends Spider {
 
     @Override
     public String detailContent(List<String> ids) throws Exception {
-        if (ids.get(0).equals(siteUrl)) return Result.error("比賽尚未開始");
+        if (ids.get(0).equals(siteUrl)) return Result.error("比赛尚未开始");
         Document doc = Jsoup.parse(OkHttp.string(ids.get(0), getHeader()));
         String t = doc.select("#t").attr("value");
         String result = t.substring(6);
