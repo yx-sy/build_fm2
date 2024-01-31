@@ -106,8 +106,8 @@ public class Duanju extends Spider {
         String area = doc.select("a.tag-link").eq(2).text();
         String remark = doc.select("div.title-info span").text();
         String director = "Qile";
-        String actor = "FongMi";
-        String brief = "该剧由蜂蜜用爱发电制作，欢迎观看！";
+        String actor = "FireFly";
+        String brief = "该剧由用爱发电制作，欢迎观看！";
         Vod vod = new Vod();
         vod.setVodId(ids.get(0));
         vod.setVodYear(year);
