@@ -72,8 +72,8 @@ public class Bili extends Spider {
 
     private List<Filter> getFilter() {
         List<Filter> items = new ArrayList<>();
-        items.add(new Filter("order", "排序", Arrays.asList(new Filter.Value("預設", "totalrank"), new Filter.Value("最多點擊", "click"), new Filter.Value("最新發布", "pubdate"), new Filter.Value("最多彈幕", "dm"), new Filter.Value("最多收藏", "stow"))));
-        items.add(new Filter("duration", "時長", Arrays.asList(new Filter.Value("全部時長", "0"), new Filter.Value("60分鐘以上", "4"), new Filter.Value("30~60分鐘", "3"), new Filter.Value("10~30分鐘", "2"), new Filter.Value("10分鐘以下", "1"))));
+        items.add(new Filter("order", "排序", Arrays.asList(new Filter.Value("默认", "totalrank"), new Filter.Value("最多点击", "click"), new Filter.Value("最新发布", "pubdate"), new Filter.Value("最多弹幕", "dm"), new Filter.Value("最多收藏", "stow"))));
+        items.add(new Filter("duration", "时长", Arrays.asList(new Filter.Value("全部时长", "0"), new Filter.Value("60分钟以上", "4"), new Filter.Value("30~60分钟", "3"), new Filter.Value("10~30分钟", "2"), new Filter.Value("10分钟以下", "1"))));
         return items;
     }
 
@@ -150,7 +150,7 @@ public class Bili extends Spider {
         vod.setTypeName(detail.getType());
         vod.setVodContent(detail.getDesc());
         vod.setVodDirector(detail.getOwner().getFormat());
-        vod.setVodRemarks(detail.getDuration() / 60 + "分鐘");
+        vod.setVodRemarks(detail.getDuration() / 60 + "分钟");
 
         List<String> acceptDesc = new ArrayList<>();
         List<Integer> acceptQuality = new ArrayList<>();
@@ -314,7 +314,7 @@ public class Bili extends Spider {
             frame.addView(image, params);
             dialog = new AlertDialog.Builder(Init.getActivity()).setView(frame).setOnCancelListener(this::cancel).setOnDismissListener(this::dismiss).show();
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            Utils.notify("請使用 BiliBili App 掃描二維碼");
+            Utils.notify("请使用 BiliBili App 扫描二维码");
         } catch (Exception ignored) {
         }
     }
@@ -339,7 +339,7 @@ public class Bili extends Spider {
         String[] splits = Uri.parse(url).getQuery().split("&");
         for (String split : splits) sb.append(split).append(";");
         FileUtil.write(getUserCache(), cookie = sb.toString());
-        Utils.notify("請重新進入播放頁");
+        Utils.notify("请重新进入播放页");
         stopService();
     }
 
