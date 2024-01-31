@@ -88,9 +88,9 @@ public class NiNi extends Spider {
             classes.add(adult && typeName.contains("午夜") ? 0 : classes.size(), new Class(typeId, typeName));
             List<Filter> array = new ArrayList<>();
             array.add(getFilter("排序", "by", object.getJSONObject("sortsMap").getJSONArray(typeId), "title", "id"));
-            array.add(getFilter("語言", "lang", object.getJSONArray("langs"), "langName", "langId"));
-            array.add(getFilter("地區", "area", object.getJSONArray("regions"), "regionName", "regionId"));
-            array.add(getFilter("類型", "class", object.getJSONObject("typesMap").getJSONArray(typeId), "showTypeName", "showTypeId"));
+            array.add(getFilter("语言", "lang", object.getJSONArray("langs"), "langName", "langId"));
+            array.add(getFilter("地区", "area", object.getJSONArray("regions"), "regionName", "regionId"));
+            array.add(getFilter("类型", "class", object.getJSONObject("typesMap").getJSONArray(typeId), "showTypeName", "showTypeId"));
             array.add(getFilter("年份", "year", object.getJSONArray("yearRanges"), "name", "code"));
             filters.put(typeId, array);
         }
