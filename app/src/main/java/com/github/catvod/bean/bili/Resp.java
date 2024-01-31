@@ -63,7 +63,7 @@ public class Resp {
         }
 
         public String getDuration() {
-            return TextUtils.isEmpty(duration) ? getLength() : duration.split(":")[0] + "分鐘";
+            return TextUtils.isEmpty(duration) ? getLength() : duration.split(":")[0] + "分钟";
         }
 
         public String getLength() {
