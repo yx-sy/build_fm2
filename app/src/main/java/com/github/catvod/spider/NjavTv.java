@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class Miss extends Spider {
+public class NjavTv extends Spider {
 
-    private final String url = "https://missav.com/";
+    private final String url = "https://njavtv.com";
 
     @Override
     public String homeContent(boolean filter) throws Exception {
