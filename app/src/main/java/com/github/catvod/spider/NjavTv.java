@@ -77,7 +77,7 @@ public class NjavTv extends Spider {
         vod.setVodId(ids.get(0));
         vod.setVodPic(pic);
         vod.setVodName(name);
-        vod.setVodPlayFrom("MissAV");
+        vod.setVodPlayFrom("Njav");
         vod.setVodPlayUrl("播放$" + ids.get(0));
         return Result.string(vod);
     }
