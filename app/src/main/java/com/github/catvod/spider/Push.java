@@ -9,6 +9,7 @@ import com.github.catvod.bean.Sub;
 import com.github.catvod.bean.Vod;
 import com.github.catvod.crawler.Spider;
 import com.github.catvod.net.OkHttp;
+import com.github.catvod.utils.Image;
 import com.github.catvod.utils.Util;
 
 import java.io.File;
@@ -48,6 +49,7 @@ public class Push extends Spider {
     private Vod vod(String url) {
         Vod vod = new Vod();
         vod.setVodId(url);
+        vod.setVodPic(Image.PUSH);
         vod.setTypeName("FongMi");
         vod.setVodName(url.startsWith("file://") ? new File(url).getName() : url);
         if (url.startsWith("http") && url.contains("#")) url = url.replace("#", "***");
