@@ -18,7 +18,7 @@ import java.util.List;
 
 public class Eighteen extends Spider {
 
-    private final String url = "https://mjv002.com/zh/";
+    private final String url = "https://mjv003.com/zh/";
 
     @Override
     public void init(Context context, String extend) throws Exception {
