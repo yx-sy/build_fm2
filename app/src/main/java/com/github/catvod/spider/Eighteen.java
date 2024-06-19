@@ -22,7 +22,7 @@ public class Eighteen extends Spider {
 
     @Override
     public void init(Context context, String extend) throws Exception {
-        OkHttp.newCall("https://mjv002.com/zh/chinese_IamOverEighteenYearsOld/19/index.html").close();
+        OkHttp.newCall("https://mjv003.com/zh/chinese_IamOverEighteenYearsOld/19/index.html").close();
     }
 
     @Override
