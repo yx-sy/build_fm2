@@ -18,11 +18,11 @@ import java.util.List;
 
 public class Eighteen extends Spider {
 
-    private final String url = "https://mjv003.com/zh/";
+    private final String url = "https://mjv002.com/zh/";
 
     @Override
     public void init(Context context, String extend) throws Exception {
-        OkHttp.newCall("https://mjv003.com/zh/chinese_IamOverEighteenYearsOld/19/index.html").close();
+        OkHttp.newCall("https://mjv002.com/zh/chinese_IamOverEighteenYearsOld/19/index.html").close();
     }
 
     @Override
@@ -102,7 +102,7 @@ public class Eighteen extends Spider {
     public boolean isVideoFormat(String url) throws Exception {
         return !url.contains("afcdn.net") && (url.contains(".m3u8") || url.contains(".mp4"));
     }
-    
+
     private String searchContent(String key, String pg) {
         HashMap<String, String> params = new HashMap<>();
         params.put("search_keyword", key);
